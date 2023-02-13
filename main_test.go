@@ -19,7 +19,7 @@ func TestServeApp(t *testing.T) {
 	if rr.Code != http.StatusOK {
 		t.Errorf("/ returned wrong status code, expected %v, got %v", http.StatusOK, rr.Code)
 	}
-	expectedString := "Welcome to the RHTE EMEA"
+	expectedString := "Hello world"
 	if !strings.Contains(rr.Body.String(), expectedString) {
 		t.Errorf("/ returned wrong body, expected %v, got %v", expectedString, rr.Body.String())
 	}
